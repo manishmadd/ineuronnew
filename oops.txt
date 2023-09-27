@@ -1,0 +1,151 @@
+Python OOP Assignment
+
+Q1. What is the purpose of Python's OOP?
+
+Object-Oriented Programming (OOP) in Python aims to organize code into reusable and modular structures called classes and objects. It promotes code reusability, readability, and maintainability by modeling real-world entities and their interactions using classes and objects.
+
+Q2. Where does an inheritance search look for an attribute?
+
+Inheritance searches for an attribute first in the instance object itself. If not found, it searches in the class of the instance, then in its superclasses recursively until the attribute is found or the search reaches the base object class.
+
+Q3. How do you distinguish between a class object and an instance object?
+
+A class object represents the class itself, while an instance object represents a specific instance or occurrence of that class. Class objects are used to access class-level attributes and methods, while instance objects hold unique data for each instance.
+
+Q4. What makes the first argument in a class’s method function special?
+
+The first argument in a class's method function is usually named self. It refers to the instance on which the method is called and allows access to instance-specific attributes and methods.
+
+Q5. What is the purpose of the init method?
+
+The __init__ method is a special method in Python classes used for object initialization. It sets initial values for instance attributes when an object is created from the class.
+
+Q6. What is the process for creating a class instance?
+
+To create a class instance in Python, you call the class as if it were a function with any required arguments and assign the result to a variable.
+
+Q7. What is the process for creating a class?
+
+To create a class in Python, you use the class keyword followed by the class name and a colon. Inside the class, you define attributes and methods.
+
+Q8. How would you define the superclasses of a class?
+
+The superclasses of a class are defined in the class declaration using parentheses and a comma-separated list of parent classes. For example: class MyClass(Parent1, Parent2):
+
+Q9. What is the relationship between classes and modules?
+
+Classes are typically defined within modules. A module can contain multiple classes, functions, and variables, making it a way to organize and structure Python code.
+
+Q10. How do you make instances and classes?
+
+Instances are created by calling the class as if it were a function, while classes are defined using the class keyword.
+
+Q11. Where and how should class attributes be created?
+
+Class attributes should be created within the class body but outside of any methods. They are shared among all instances of the class.
+
+Q12. Where and how are instance attributes created?
+
+Instance attributes are created within the __init__ method of a class by using self to associate them with the instance.
+
+Q13. What does the term "self" in a Python class mean?
+
+In a Python class, self refers to the instance of the class and is used to access instance-specific attributes and methods.
+
+Q14. How does a Python class handle operator overloading?
+
+Python classes can overload operators by defining special methods with double underscores (e.g., __add__, __sub__) to specify how operators should behave with class instances.
+
+Q15. When do you consider allowing operator overloading of your classes?
+
+Operator overloading is considered when you want to define custom behavior for operators like addition, subtraction, or comparison for instances of your class.
+
+Q16. What is the most popular form of operator overloading?
+
+The most popular form of operator overloading is defining the __str__ method to customize the string representation of instances when using str() or print().
+
+Q17. What are the two most important concepts to grasp in order to comprehend Python OOP code?
+
+The two most important concepts in Python OOP are classes and objects. Classes define the structure, and objects are instances of those classes that hold data and behavior.
+
+Q18. Describe three applications for exception processing.
+
+Three applications for exception processing are error handling (gracefully handling errors), resource management (ensuring resources are released), and event handling (responding to events).
+
+Q19. What happens if you don't do something extra to treat an exception?
+
+If you don't handle an exception, the program will terminate abruptly, and an error message will be displayed.
+
+Q20. What are your options for recovering from an exception in your script?
+
+You can use try-except blocks to catch and handle exceptions, allowing the script to recover gracefully or take alternative actions.
+
+Q21. Describe two methods for triggering exceptions in your script.
+
+Two methods for triggering exceptions are raising exceptions using the raise statement and using built-in functions that can raise exceptions based on conditions.
+
+Q22. Identify two methods for specifying actions to be executed at termination time, regardless of whether or not an exception exists.
+
+Two methods for specifying actions to be executed at termination time are using the finally block in a try-except-finally structure and using context managers with the with statement.
+
+Q23. What is the purpose of the try statement?
+
+The try statement is used to enclose a block of code that may raise exceptions. It allows you to catch and handle exceptions gracefully.
+
+Q24. What are the two most popular try statement variations?
+
+The two most popular try statement variations are try-except for catching and handling specific exceptions and try-finally for specifying cleanup code.
+
+Q25. What is the purpose of the raise statement?
+
+The raise statement is used to explicitly raise exceptions in Python, allowing you to define custom error conditions.
+
+Q26. What does the assert statement do, and what other statement is it like?
+
+The assert statement is used for debugging and sanity checks. It raises an AssertionError if a specified condition is False. It is similar to the if statement but is used for debugging rather than regular program flow.
+
+Q27. What is the purpose of the with/as argument, and what other statement is it like?
+
+The with/as statement is used for context management, such as file handling. It ensures proper resource cleanup. It is similar to a try-finally block but provides a cleaner and more readable syntax.
+
+**Q28. What are *args, kwargs?
+
+*args and **kwargs are used in Python function definitions to allow the passing of a variable number of arguments. *args collects positional arguments into a tuple, while **kwargs collects keyword arguments into a dictionary
+
+
+# Creating a class
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+
+    def print_value(self):
+        print(self.value)
+
+# Creating instances
+instance1 = MyClass(42)
+instance2 = MyClass(100)
+
+# Accessing attributes and calling methods of instances
+print(instance1.value)  # Output: 42
+instance2.print_value()  # Output: 100
+
+# Creating parent class
+class ParentClass:
+    def parent_method(self):
+        print("This is a parent method")
+
+# Creating child class that inherits from ParentClass
+class ChildClass(ParentClass):
+    def child_method(self):
+        print("This is a child method")
+
+# Creating instances of child class
+child_instance = ChildClass()
+
+# Accessing methods from both parent and child classes
+child_instance.parent_method()  # Output: This is a parent method
+child_instance.child_method()   # Output: This is a child method
+
+
+
+
